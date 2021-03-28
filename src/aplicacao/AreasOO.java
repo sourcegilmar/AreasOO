@@ -3,6 +3,11 @@ package aplicacao;
 import java.util.Locale;
 import java.util.Scanner;
 
+import entidades.Quadrado;
+import entidades.Retangulo;
+import entidades.Trapezio;
+import entidades.Triangulo;
+
 public class AreasOO {
 
 	public static void main(String[] args) {
@@ -19,44 +24,36 @@ public class AreasOO {
 				System.out.println("Opção inválida!");
 			switch (op) {
 			case 1:				
-				double aq = 0;
+				Quadrado quadrado = new Quadrado();
 				System.out.println("Informe o lado: ");
-				double x = sc.nextDouble();
-				aq = Math.pow(x, 2);
-				System.out.println("---------------------------");
-				System.out.println("A área do quadrado é: "+String.format("%.2f", aq));
-				System.out.println("---------------------------");
+				quadrado.setLado(sc.nextDouble());
+				System.out.println("A área é: "+quadrado.area());	
 				break;
 			case 2:
-				double ar = 0;
-				System.out.println("Informe os dois lados do retângulo: ");
-				double a = sc.nextDouble();
-				double b = sc.nextDouble();
-				ar = a * b;
-				System.out.println("---------------------------");
-				System.out.println("A área do retângulo é: "+String.format("%.2f", ar));
-				System.out.println("---------------------------");				
+				Retangulo retangulo = new Retangulo();
+				System.out.println("Informe o lado 1: ");
+				retangulo.setLado1(sc.nextDouble());
+				System.out.println("Informe o lado 2: ");
+				retangulo.setLado2(sc.nextDouble());
+				System.out.println("A área é: "+retangulo.area());				
 				break;
 			case 3:
-				double at=0;
-				System.out.println("Informe a base e a altura do triângulo");
-				double y = sc.nextDouble();
-				double z = sc.nextDouble();
-				at = y * z;
-				System.out.println("---------------------------");
-				System.out.println("A área do retângulo é: "+String.format("%.2f", at));
-				System.out.println("---------------------------");
+				Triangulo triangulo = new Triangulo();
+				System.out.println("Informe a base: ");
+				triangulo.setBase(sc.nextDouble());
+				System.out.println("Informe a altura: ");
+				triangulo.setAltura(sc.nextDouble());
+				System.out.println("A área é: "+triangulo.area());
 				break;
 			case 4:
-				double at2=0;
-				System.out.println("Informe as medidas do trapézio: ");
-				double m1 = sc.nextDouble();
-				double m2 = sc.nextDouble();
-				double m3 = sc.nextDouble();
-				at2 = ((m1 + m2)*m3)/2;
-				System.out.println("---------------------------");
-				System.out.println("A área do retângulo é: "+String.format("%.2f", at2));
-				System.out.println("---------------------------");
+				Trapezio trapezio = new Trapezio();
+				System.out.println("Informe a base maior: ");
+				trapezio.setBaseMaior(sc.nextDouble());
+				System.out.println("Informe a base menor: ");
+				trapezio.setBaseMenor(sc.nextDouble());
+				System.out.println("Informe a base altura: ");
+				trapezio.setAltura(sc.nextDouble());
+				System.out.println("A área é: "+trapezio.area());		
 				break;
 			/*
 			 * A opção default da estrutura foi suprimida
