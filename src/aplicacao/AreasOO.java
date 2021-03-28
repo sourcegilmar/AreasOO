@@ -15,8 +15,7 @@ public class AreasOO {
 		Scanner sc = new Scanner(System.in);
 		int op = 1;
 		do {
-			String s = "Opções\n"+"1-Calcular área do quadrado\n"+"2-Calcular área do retângulo\n"+
-					"3-Calcular área do triângulo\n"+"4-Calcular área do trapézio\n"+"5-Sair\n";
+			String s = menu();
 			System.out.println(s);
 			System.out.println("Informe a opção: ");
 			op = sc.nextInt();
@@ -69,6 +68,16 @@ public class AreasOO {
 		System.out.println("* PROGRAMA FINALIZADO *");
 		System.out.println("-----------------------");
 
+	}
+
+	public static String menu() {
+		String s = "Opções\n"+
+				"1-Calcular área do quadrado\n"+
+				"2-Calcular área do retângulo\n"+
+				"3-Calcular área do triângulo\n"+
+				"4-Calcular área do trapézio\n"+
+				"5-Sair\n";
+		return s;
 	}
 	
 	/*
