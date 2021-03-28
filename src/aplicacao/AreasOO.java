@@ -64,10 +64,14 @@ public class AreasOO {
 			 */
 			}
 		} while (op != 5);
+		mensagemEncerramento();
+
+	}
+
+	public static void mensagemEncerramento() {
 		System.out.println("-----------------------");
 		System.out.println("* PROGRAMA FINALIZADO *");
 		System.out.println("-----------------------");
-
 	}
 
 	public static String menu() {
